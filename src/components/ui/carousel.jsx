@@ -101,7 +101,7 @@ const Carousel = React.forwardRef((
       <div
         ref={ref}
         onKeyDownCapture={handleKeyDown}
-        className={cn("tailwind.config.jsrelative", className)}
+        className={cn("relative", className)}
         role="region"
         aria-roledescription="carousel"
         {...props}>
@@ -116,12 +116,12 @@ const CarouselContent = React.forwardRef(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
 
   return (
-    (<div ref={carouselRef} className="tailwind.config.jsoverflow-hidden">
+    (<div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
         className={cn(
-          "tailwind.config.jsflex",
-          orientation === "horizontal" ? "tailwind.config.js-ml-4" : "tailwind.config.js-mt-4 tailwind.config.jsflex-col",
+          "flex",
+          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className
         )}
         {...props} />
@@ -139,8 +139,8 @@ const CarouselItem = React.forwardRef(({ className, ...props }, ref) => {
       role="group"
       aria-roledescription="slide"
       className={cn(
-        "tailwind.config.jsmin-w-0 tailwind.config.jsshrink-0 tailwind.config.jsgrow-0 tailwind.config.jsbasis-full",
-        orientation === "horizontal" ? "tailwind.config.jspl-4" : "tailwind.config.jspt-4",
+        "min-w-0 shrink-0 grow-0 basis-full",
+        orientation === "horizontal" ? "pl-4" : "pt-4",
         className
       )}
       {...props} />)
@@ -156,18 +156,14 @@ const CarouselPrevious = React.forwardRef(({ className, variant = "outline", siz
       ref={ref}
       variant={variant}
       size={size}
-      className={cn(
-        "tailwind.config.jsabsolute tailwind.config.js tailwind.config.jsh-8 tailwind.config.jsw-8 tailwind.config.jsrounded-full",
-        orientation === "horizontal"
-          ? "tailwind.config.js-left-12 tailwind.config.jstop-1/2 tailwind.config.js-translate-y-1/2"
-          : "tailwind.config.js-top-12 tailwind.config.jsleft-1/2 tailwind.config.js-translate-x-1/2 tailwind.config.jsrotate-90",
-        className
-      )}
+      className={cn("absolute  h-8 w-8 rounded-full", orientation === "horizontal"
+        ? "-left-12 top-1/2 -translate-y-1/2"
+        : "-top-12 left-1/2 -translate-x-1/2 rotate-90", className)}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
-      <ArrowLeft className="tailwind.config.jsh-4 tailwind.config.jsw-4" />
-      <span className="tailwind.config.jssr-only">Previous slide</span>
+      <ArrowLeft className="h-4 w-4" />
+      <span className="sr-only">Previous slide</span>
     </Button>)
   );
 })
@@ -181,18 +177,14 @@ const CarouselNext = React.forwardRef(({ className, variant = "outline", size = 
       ref={ref}
       variant={variant}
       size={size}
-      className={cn(
-        "tailwind.config.jsabsolute tailwind.config.jsh-8 tailwind.config.jsw-8 tailwind.config.jsrounded-full",
-        orientation === "horizontal"
-          ? "tailwind.config.js-right-12 tailwind.config.jstop-1/2 tailwind.config.js-translate-y-1/2"
-          : "tailwind.config.js-bottom-12 tailwind.config.jsleft-1/2 tailwind.config.js-translate-x-1/2 tailwind.config.jsrotate-90",
-        className
-      )}
+      className={cn("absolute h-8 w-8 rounded-full", orientation === "horizontal"
+        ? "-right-12 top-1/2 -translate-y-1/2"
+        : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90", className)}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}>
-      <ArrowRight className="tailwind.config.jsh-4 tailwind.config.jsw-4" />
-      <span className="tailwind.config.jssr-only">Next slide</span>
+      <ArrowRight className="h-4 w-4" />
+      <span className="sr-only">Next slide</span>
     </Button>)
   );
 })

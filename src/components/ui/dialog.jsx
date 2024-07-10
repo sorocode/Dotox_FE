@@ -16,7 +16,7 @@ const DialogOverlay = React.forwardRef(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      "tailwind.config.jsfixed tailwind.config.jsinset-0 tailwind.config.jsz-50 tailwind.config.jsbg-black/80 tailwind.config.js data-[state=open]:tailwind.config.jsanimate-in data-[state=closed]:tailwind.config.jsanimate-out data-[state=closed]:tailwind.config.jsfade-out-0 data-[state=open]:tailwind.config.jsfade-in-0",
+      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props} />
@@ -29,15 +29,15 @@ const DialogContent = React.forwardRef(({ className, children, ...props }, ref) 
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "tailwind.config.jsfixed tailwind.config.jsleft-[50%] tailwind.config.jstop-[50%] tailwind.config.jsz-50 tailwind.config.jsgrid tailwind.config.jsw-full tailwind.config.jsmax-w-lg tailwind.config.jstranslate-x-[-50%] tailwind.config.jstranslate-y-[-50%] tailwind.config.jsgap-4 tailwind.config.jsborder tailwind.config.jsbg-background tailwind.config.jsp-6 tailwind.config.jsshadow-lg tailwind.config.jsduration-200 data-[state=open]:tailwind.config.jsanimate-in data-[state=closed]:tailwind.config.jsanimate-out data-[state=closed]:tailwind.config.jsfade-out-0 data-[state=open]:tailwind.config.jsfade-in-0 data-[state=closed]:tailwind.config.jszoom-out-95 data-[state=open]:tailwind.config.jszoom-in-95 data-[state=closed]:tailwind.config.jsslide-out-to-left-1/2 data-[state=closed]:tailwind.config.jsslide-out-to-top-[48%] data-[state=open]:tailwind.config.jsslide-in-from-left-1/2 data-[state=open]:tailwind.config.jsslide-in-from-top-[48%] sm:tailwind.config.jsrounded-lg",
+        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
         className
       )}
       {...props}>
       {children}
       <DialogPrimitive.Close
-        className="tailwind.config.jsabsolute tailwind.config.jsright-4 tailwind.config.jstop-4 tailwind.config.jsrounded-sm tailwind.config.jsopacity-70 tailwind.config.jsring-offset-background tailwind.config.jstransition-opacity hover:tailwind.config.jsopacity-100 focus:tailwind.config.jsoutline-none focus:tailwind.config.jsring-2 focus:tailwind.config.jsring-ring focus:tailwind.config.jsring-offset-2 disabled:tailwind.config.jspointer-events-none data-[state=open]:tailwind.config.jsbg-accent data-[state=open]:tailwind.config.jstext-muted-foreground">
-        <X className="tailwind.config.jsh-4 tailwind.config.jsw-4" />
-        <span className="tailwind.config.jssr-only">Close</span>
+        className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+        <X className="h-4 w-4" />
+        <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
@@ -49,10 +49,7 @@ const DialogHeader = ({
   ...props
 }) => (
   <div
-    className={cn(
-      "tailwind.config.jsflex tailwind.config.jsflex-col tailwind.config.jsspace-y-1.5 tailwind.config.jstext-center sm:tailwind.config.jstext-left",
-      className
-    )}
+    className={cn("flex flex-col space-y-1.5 text-center sm:text-left", className)}
     {...props} />
 )
 DialogHeader.displayName = "DialogHeader"
@@ -62,10 +59,7 @@ const DialogFooter = ({
   ...props
 }) => (
   <div
-    className={cn(
-      "tailwind.config.jsflex tailwind.config.jsflex-col-reverse sm:tailwind.config.jsflex-row sm:tailwind.config.jsjustify-end sm:tailwind.config.jsspace-x-2",
-      className
-    )}
+    className={cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className)}
     {...props} />
 )
 DialogFooter.displayName = "DialogFooter"
@@ -73,10 +67,7 @@ DialogFooter.displayName = "DialogFooter"
 const DialogTitle = React.forwardRef(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
     ref={ref}
-    className={cn(
-      "tailwind.config.jstext-lg tailwind.config.jsfont-semibold tailwind.config.jsleading-none tailwind.config.jstracking-tight",
-      className
-    )}
+    className={cn("text-lg font-semibold leading-none tracking-tight", className)}
     {...props} />
 ))
 DialogTitle.displayName = DialogPrimitive.Title.displayName
@@ -84,10 +75,7 @@ DialogTitle.displayName = DialogPrimitive.Title.displayName
 const DialogDescription = React.forwardRef(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
     ref={ref}
-    className={cn(
-      "tailwind.config.jstext-sm tailwind.config.jstext-muted-foreground",
-      className
-    )}
+    className={cn("text-sm text-muted-foreground", className)}
     {...props} />
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName
