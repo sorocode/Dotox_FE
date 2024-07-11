@@ -1,7 +1,7 @@
 import { Button } from "../ui/button";
 import SimpleLoginContainer from "../ui/Login/SimpleLoginContainer";
 import LoginForm from "../ui/LoginForm";
-import { Separator } from "../ui/separator";
+import { Separator } from "@/components/ui/separator";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
