@@ -1,6 +1,6 @@
 import { Button } from "./button";
 
-const CustomButton = ({ fontSize, filled, children }) => {
+const CustomButton = ({ fontSize, filled, children, ...props }) => {
   const sizeClass =
     fontSize === "large"
       ? "py-3 px-6 text-lg"
@@ -16,7 +16,11 @@ const CustomButton = ({ fontSize, filled, children }) => {
   // Combine classes
   const cssClass = `flex justify-center items-center border-[1px] w-full my-2 ${sizeClass} ${filledClass} rounded-lg hover:opacity-80 `;
 
-  return <Button className={cssClass}>{children}</Button>;
+  return (
+    <Button className={cssClass} {...props}>
+      {children}
+    </Button>
+  );
 };
 
 export default CustomButton;
