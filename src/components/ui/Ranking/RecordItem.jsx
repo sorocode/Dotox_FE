@@ -12,9 +12,9 @@ export const RecordItem = () => {
   return (
     <div className="flex justify-center items-center px-2 gap-4">
       <img src={Profile4} className="w-16" alt="Profile image" />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full gap-2">
         <div className="flex justify-between">
-          <span>이정민</span>
+          <span className="font-semibold text-md">이정민</span>
           <span>3:48:58</span>
         </div>
         <Progress value={progress} className="bg-lightGrey" />
