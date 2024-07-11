@@ -11,9 +11,7 @@ const IndexPage = () => {
       <CustomButton filled={true} asChild>
         <Link to="login">로그인</Link>
       </CustomButton>
-      <CustomButton fontSize="large" filled={true}>
-        큰 버튼
-      </CustomButton>
+
       <Button>기본 버튼</Button>
     </div>
   );
