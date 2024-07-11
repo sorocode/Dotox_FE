@@ -1,4 +1,7 @@
-import { RankingCard } from "@/components/ui/Ranking/RankingCard";
+import {
+  RankingCard,
+  RankingCardSkeleton,
+} from "@/components/ui/Ranking/RankingCard";
 
 const TopThreeArea = () => {
   return (
@@ -6,8 +9,8 @@ const TopThreeArea = () => {
       <p className="font-semibold">순위</p>
       <div className="flex justify-between items-center gap-2">
         <RankingCard />
-        <RankingCard />
-        <RankingCard />
+        <RankingCardSkeleton />
+        <RankingCardSkeleton />
       </div>
     </div>
   );

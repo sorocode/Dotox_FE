@@ -1,8 +1,9 @@
 import Profile4 from "@/assets/fakeImages/Profile4.svg";
 import { Progress } from "../progress";
 import { useEffect, useState } from "react";
+import { SkeletonCircle, Skeleton } from "@chakra-ui/react";
 
-const RecordItem = () => {
+export const RecordItem = () => {
   const [progress, setProgress] = useState(13);
   useEffect(() => {
     const timer = setTimeout(() => setProgress(66), 500);
@@ -22,4 +23,14 @@ const RecordItem = () => {
   );
 };
 
-export default RecordItem;
+export const RecordItemSkeleton = () => {
+  return (
+    <div className="flex items-center gap-4 pl-2">
+      <SkeletonCircle size="14" />
+      <div className="flex flex-col items-center gap-2">
+        <Skeleton width="250px" height="20px" />
+        <Skeleton width="250px" height="20px" />
+      </div>
+    </div>
+  );
+};

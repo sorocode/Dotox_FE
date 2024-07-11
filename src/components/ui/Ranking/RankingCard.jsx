@@ -1,6 +1,6 @@
+import { SkeletonText, SkeletonCircle, Skeleton } from "@chakra-ui/react";
 import { Card, CardContent } from "../card";
 import Profile1 from "@/assets/fakeImages/Profile1.svg";
-import { Skeleton } from "@/components/ui/skeleton";
 
 export const RankingCard = () => {
   return (
@@ -19,12 +19,15 @@ export const RankingCard = () => {
 
 export const RankingCardSkeleton = () => {
   return (
-    <div className="flex items-center space-x-4">
-      <Skeleton className="h-12 w-12 rounded-full" />
-      <div className="space-y-2">
-        <Skeleton className="h-4 w-[250px]" />
-        <Skeleton className="h-4 w-[200px]" />
-      </div>
-    </div>
+    <Card className="flex flex-col items-center">
+      <CardContent className="flex flex-col justify-center items-center pt-2 gap-2">
+        <span className="font-medium text-deepGreen">1등</span>
+        <SkeletonCircle size="12" />
+        <div className="flex flex-col items-center gap-2">
+          <Skeleton mt="3" height="20px" width="50px" />
+          <Skeleton height="15px" width="60px" />
+        </div>
+      </CardContent>
+    </Card>
   );
 };
