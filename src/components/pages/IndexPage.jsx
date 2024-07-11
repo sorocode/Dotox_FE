@@ -1,14 +1,16 @@
 import { Button } from "../ui/button";
 import CustomButton from "../ui/CustomButton";
-
+import { Link } from "react-router-dom";
 const IndexPage = () => {
   return (
     <div>
       <p>인덱스페이지입니다.</p>
-      <CustomButton filled={false} onClick={() => alert("clicked")}>
-        빈 버튼
+      <CustomButton filled={false} asChild>
+        <Link to="/ranking">랭킹</Link>
       </CustomButton>
-      <CustomButton filled={true}>채워진 버튼</CustomButton>
+      <CustomButton filled={true} asChild>
+        <Link to="login">로그인</Link>
+      </CustomButton>
       <CustomButton fontSize="large" filled={true}>
         큰 버튼
       </CustomButton>
