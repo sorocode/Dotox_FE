@@ -4,14 +4,7 @@ function Skeleton({
   className,
   ...props
 }) {
-  return (
-    (<div
-      className={cn(
-        "tailwind.config.jsanimate-pulse tailwind.config.jsrounded-md tailwind.config.jsbg-muted",
-        className
-      )}
-      {...props} />)
-  );
+  return (<div className={cn("animate-pulse rounded-md bg-muted", className)} {...props} />);
 }
 
 export { Skeleton }

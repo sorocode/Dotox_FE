@@ -1,5 +1,15 @@
+import CalendarBar from "../ui/Ranking/CalendarBar";
+import RecordArea from "../ui/Ranking/RecordArea";
+import TopThreeArea from "../ui/Ranking/TopThreeArea";
+
 const RankingPage = () => {
-  return <p>랭킹 페이지</p>;
+  return (
+    <>
+      <CalendarBar />
+      <TopThreeArea />
+      <RecordArea />
+    </>
+  );
 };
 
 export default RankingPage;
