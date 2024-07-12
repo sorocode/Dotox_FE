@@ -1,6 +1,7 @@
 import { Button } from "../ui/button";
 import CustomButton from "../ui/CustomButton";
 import { Link } from "react-router-dom";
+import CardItem from "../ui/Store/CardItem";
 const IndexPage = () => {
   return (
     <div>
@@ -14,7 +15,7 @@ const IndexPage = () => {
       <CustomButton filled={true} asChild>
         <Link to="recommend">취미, 친구 추천</Link>
       </CustomButton>
-
+      <CardItem />
       <Button>기본 버튼</Button>
     </div>
   );
