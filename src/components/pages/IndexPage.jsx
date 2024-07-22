@@ -18,6 +18,12 @@ const IndexPage = () => {
       <CustomButton filled={true} asChild>
         <Link to="recommend">취미, 친구 추천</Link>
       </CustomButton>
+      <CustomButton filled={true} asChild>
+        <Link to = "select">취미 선택</Link>
+      </CustomButton>
+      <CustomButton filled={true} asChild>
+        <Link to = "quest">퀘스트 수행</Link>
+      </CustomButton>
 
       <Button>기본 버튼</Button>
     </div>
