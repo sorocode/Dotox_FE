@@ -3,8 +3,10 @@ import ClubImage from "@/assets/recommend2.png";
 import { Link } from "react-router-dom";
 import InterestsArea from "@/pages/Recommend/InterestsArea.jsx";
 import CustomButton from "../../components/ui/CustomButton.jsx";
+import useCheckLogin from "@/hooks/useCheckLogin.jsx";
 
 const RecommendPage = () => {
+  useCheckLogin();
   return (
     <>
       <div className="flex flex-col font-bold text-lg">

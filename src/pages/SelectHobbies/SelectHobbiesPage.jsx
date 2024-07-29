@@ -9,6 +9,7 @@ import rectangle524_2 from "@/assets/rectangle5242.png";
 import rectangle525_2 from "@/assets/rectangle5252.png";
 import CustomButton from "@/components/ui/CustomButton";
 import RecommendModal from "./RecommendModal";
+import useCheckLogin from "@/hooks/useCheckLogin";
 
 // Reusable component for hobby items
 const HobbyItem = ({ imgSrc, altText, title }) => (
@@ -36,6 +37,8 @@ const SelectHobbiesPage = () => {
     { imgSrc: rectangle524_2, altText: "여행", title: "여행" },
     { imgSrc: rectangle525_2, altText: "다꾸", title: "다꾸" },
   ];
+  //로그인 되었는지 확인
+  useCheckLogin();
 
   return (
     <div className="w-full h-full min-h-screen bg-white px-4 py-6">
