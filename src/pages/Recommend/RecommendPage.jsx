@@ -1,8 +1,8 @@
 import FriendImage from "@/assets/recommend1.png";
 import ClubImage from "@/assets/recommend2.png";
 import { Link } from "react-router-dom";
-import InterestsArea from "../ui/Recommend/InterestsArea";
-import CustomButton from "../ui/CustomButton";
+import InterestsArea from "@/pages/Recommend/InterestsArea.jsx";
+import CustomButton from "../components/ui/CustomButton.jsx";
 
 const RecommendPage = () => {
   return (
