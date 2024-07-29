@@ -1,5 +1,5 @@
 import Profile4 from "@/assets/fakeImages/Profile4.svg";
-import { Progress } from "../progress";
+import { Progress } from "../../components/ui/progress.jsx";
 import { useEffect, useState } from "react";
 import { SkeletonCircle, Skeleton } from "@chakra-ui/react";
 

@@ -1,4 +1,5 @@
-import { RecordItem, RecordItemSkeleton } from "./RecordItem";
+import {RecordItem, RecordItemSkeleton} from "@/pages/Ranking/RecordItem.jsx";
+
 
 const RecordArea = () => {
   return (

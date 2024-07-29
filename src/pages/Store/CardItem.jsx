@@ -1,9 +1,9 @@
-import { Badge } from "../badge";
-import { Card, CardContent } from "../card";
+import { Badge } from "../../components/ui/badge.jsx";
+import { Card, CardContent } from "../../components/ui/card.jsx";
 import ClassImage from "@/assets/fakeImages/classImage.png";
 import HeartIcon from "@/assets/heart.svg";
 import StarIcon from "@/assets/star.svg";
-import { CarouselItem } from "../carousel";
+import { CarouselItem } from "../../components/ui/carousel.jsx";
 
 const CardItem = () => {
   //  FIXME:하드 코딩된 값 변경하기

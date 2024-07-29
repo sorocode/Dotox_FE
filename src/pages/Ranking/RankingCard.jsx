@@ -1,5 +1,5 @@
 import { SkeletonText, SkeletonCircle, Skeleton } from "@chakra-ui/react";
-import { Card, CardContent } from "../card";
+import { Card, CardContent } from "../../components/ui/card.jsx";
 import Profile1 from "@/assets/fakeImages/Profile1.svg";
 
 export const RankingCard = () => {

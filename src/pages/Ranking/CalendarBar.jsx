@@ -1,7 +1,7 @@
-import DateItem from "./DateItem";
+import DateItem from "./DateItem.jsx";
 import LeftArrow from "@/assets/leftArrow.svg";
 import RightArrow from "@/assets/rightArrow.svg";
-import { Button } from "../button";
+import { Button } from "../../components/ui/button.jsx";
 const CalendarBar = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-2">

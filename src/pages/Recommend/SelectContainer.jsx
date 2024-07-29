@@ -6,7 +6,7 @@ import {
   SelectGroup,
   SelectLabel,
   SelectItem,
-} from "../select";
+} from "../../components/ui/select.jsx";
 const SelectContainer = () => {
   return (
     <Select>
