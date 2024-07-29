@@ -11,7 +11,7 @@ const Header = () => {
         </span> */}
       </Link>
 
-      <Link to="/login">
+      <Link to="/profile">
         <AccountCircle color="action" fontSize="large" />
       </Link>
     </div>

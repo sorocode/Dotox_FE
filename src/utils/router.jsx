@@ -7,6 +7,7 @@ import StorePage from "@/pages/Store/StorePage.jsx";
 import RecommendPage from "@/pages/Recommend/RecommendPage.jsx";
 import QuestPage from "@/pages/Quest/QuestPage.jsx";
 import LoginPage from "@/pages/Login/LoginPage.jsx";
+import ProfilePage from "@/pages/Profile/ProfilePage";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: "login",
         element: <LoginPage />,
+      },
+      {
+        path: "profile",
+        element: <ProfilePage />,
       },
     ],
   },
