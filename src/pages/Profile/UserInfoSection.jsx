@@ -8,7 +8,7 @@ const UserInfoSection = ({ imgUrl, userName }) => {
       <img src={imgUrl} alt="profile image" className="w-1/5" />
       <div className="flex flex-col">
         <span className="text-xl font-bold">{userName}</span>
-        <ConfirmModal message="로그아웃하시겠습니까?" />
+        <ConfirmModal trigger="로그아웃" message="로그아웃하시겠습니까?" />
       </div>
     </div>
   );
