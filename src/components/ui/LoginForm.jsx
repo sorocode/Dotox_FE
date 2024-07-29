@@ -23,7 +23,7 @@ const LoginForm = () => {
     if (email === "admin" && password === "1111") {
       setLogin();
       alert("로그인 성공");
-      navigate("/");
+      navigate("/select");
       // 여기에 로그인 성공 후의 로직을 추가하세요. 예: 페이지 이동, 토큰 저장 등
     } else {
       setError("로그인 실패: 이메일 또는 비밀번호가 잘못되었습니다.");
