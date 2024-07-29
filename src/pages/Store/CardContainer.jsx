@@ -1,5 +1,5 @@
-import { Carousel, CarouselContent } from "../carousel";
-import CardItem from "./CardItem";
+import { Carousel, CarouselContent } from "../../components/ui/carousel.jsx";
+import CardItem from "./CardItem.jsx";
 
 const CardContainer = () => {
   //  FIXME:하드 코딩된 값 변경하기

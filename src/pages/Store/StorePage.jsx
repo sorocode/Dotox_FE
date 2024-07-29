@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import CardContainer from "../ui/Store/CardContainer";
+import { Button } from "@/components/ui/button.jsx";
+import CardContainer from "@/pages/Store/CardContainer.jsx";
 
 const StorePage = () => {
   return (

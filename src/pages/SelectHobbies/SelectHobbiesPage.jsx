@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import rectangle520 from "@/assets/rectangle520.png";
 import rectangle521 from "@/assets/rectangle521.png";
@@ -8,6 +7,7 @@ import rectangle524 from "@/assets/rectangle524.png";
 import rectangle525 from "@/assets/rectangle525.png";
 import rectangle524_2 from "@/assets/rectangle5242.png";
 import rectangle525_2 from "@/assets/rectangle5252.png";
+import CustomButton from "@/components/ui/CustomButton";
 
 // Reusable component for hobby items
 const HobbyItem = ({ imgSrc, altText, title }) => (
@@ -65,9 +65,10 @@ const SelectHobbiesPage = () => {
       </Link>
 
       {/* Next Button */}
-      <Link className="block w-full bg-[#7ad2b1] rounded-lg py-3 text-center text-lg md:text-xl font-bold text-white mb-6">
-        다음
-      </Link>
+      {/* FIXME:다음버튼 클릭 시 백엔드 통신 필요 */}
+      <CustomButton filled={true} asChild>
+        <Link to="/quest">다음</Link>
+      </CustomButton>
 
       {/* Divider */}
       <div className="w-full">

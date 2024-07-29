@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Progress } from "../progress";
+import { Progress } from "../../components/ui/progress.jsx";
 
 const InterestItem = ({ rank, title, interestValue }) => {
   const [progress, setProgress] = useState(20);

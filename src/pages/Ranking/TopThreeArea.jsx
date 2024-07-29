@@ -1,7 +1,7 @@
 import {
   RankingCard,
   RankingCardSkeleton,
-} from "@/components/ui/Ranking/RankingCard";
+} from "@/pages/Ranking/RankingCard.jsx";
 
 const TopThreeArea = () => {
   return (

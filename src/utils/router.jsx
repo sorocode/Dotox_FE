@@ -1,12 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import RootLayout from "../components/pages/RootLayout";
-import IndexPage from "../components/pages/IndexPage";
-import SelectHobbiesPage from "../components/pages/SelectHobbiesPage";
-import RankingPage from "../components/pages/RankingPage";
-import StorePage from "../components/pages/StorePage";
-import RecommendPage from "../components/pages/RecommendPage";
-import QuestPage from "../components/pages/QuestPage";
-import LoginPage from "@/components/pages/LoginPage";
+import RootLayout from "@/pages/RootLayout";
+import IndexPage from "@/pages/Index/IndexPage.jsx";
+import SelectHobbiesPage from "@/pages/SelectHobbies/SelectHobbiesPage.jsx";
+import RankingPage from "@/pages/Ranking/RankingPage.jsx";
+import StorePage from "@/pages/Store/StorePage.jsx";
+import RecommendPage from "@/pages/Recommend/RecommendPage.jsx";
+import QuestPage from "@/pages/Quest/QuestPage.jsx";
+import LoginPage from "@/pages/Login/LoginPage.jsx";
+import ProfilePage from "@/pages/Profile/ProfilePage";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: "login",
         element: <LoginPage />,
+      },
+      {
+        path: "profile",
+        element: <ProfilePage />,
       },
     ],
   },

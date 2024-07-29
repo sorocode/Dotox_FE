@@ -1,5 +1,5 @@
-import InterestItem from "./InterestItem";
-import SelectContainer from "./SelectContainer";
+import InterestItem from "./InterestItem.jsx";
+import SelectContainer from "./SelectContainer.jsx";
 
 const InterestsArea = () => {
   return (

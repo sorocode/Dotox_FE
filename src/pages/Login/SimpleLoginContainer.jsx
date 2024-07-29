@@ -1,4 +1,4 @@
-import { Button } from "../button";
+import { Button } from "../../components/ui/button.jsx";
 const SimpleLoginContainer = () => {
   return (
     <div className="flex justify-center items-center">

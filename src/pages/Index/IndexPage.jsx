@@ -1,5 +1,5 @@
-import { Button } from "../ui/button";
-import CustomButton from "../ui/CustomButton";
+import { Button } from "../../components/ui/button.jsx";
+import CustomButton from "../../components/ui/CustomButton.jsx";
 import { Link } from "react-router-dom";
 
 const IndexPage = () => {
