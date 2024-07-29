@@ -4,6 +4,7 @@ import LoginForm from "../../components/ui/LoginForm.jsx";
 import { Separator } from "@/components/ui/separator.jsx";
 
 import StartWithNaverButton from "@/components/common/StartWithNaverButton.jsx";
+import StartWithGoogleButton from "@/components/common/StartWithGoogleButton.jsx";
 
 const LoginPage = () => {
   return (
@@ -25,6 +26,7 @@ const LoginPage = () => {
         <Link to="/signup">회원가입</Link>
       </Button> */}
       <StartWithNaverButton />
+      <StartWithGoogleButton />
     </div>
   );
 };
