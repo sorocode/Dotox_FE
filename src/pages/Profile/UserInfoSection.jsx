@@ -1,6 +1,4 @@
-import Modal from "@/components/common/Modal";
-import { useLoginStore } from "@/store/store";
-import { useNavigate } from "react-router-dom";
+import ConfirmModal from "@/components/common/ConfirmModal";
 
 const UserInfoSection = ({ imgUrl, userName }) => {
   // 로그아웃 관련
@@ -10,7 +8,7 @@ const UserInfoSection = ({ imgUrl, userName }) => {
       <img src={imgUrl} alt="profile image" className="w-1/5" />
       <div className="flex flex-col">
         <span className="text-xl font-bold">{userName}</span>
-        <Modal message="로그아웃하시겠습니까?" />
+        <ConfirmModal message="로그아웃하시겠습니까?" />
       </div>
     </div>
   );

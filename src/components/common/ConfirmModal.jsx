@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useLoginStore } from "@/store/store";
 import CustomButton from "../ui/CustomButton";
 
-const Modal = ({ message }) => {
+const ConfirmModal = ({ message }) => {
   const navigate = useNavigate();
   const { setLogout } = useLoginStore();
 
@@ -43,4 +43,4 @@ const Modal = ({ message }) => {
   );
 };
 
-export default Modal;
+export default ConfirmModal;
