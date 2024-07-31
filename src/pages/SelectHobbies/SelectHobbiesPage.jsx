@@ -8,6 +8,8 @@ import rectangle525 from "@/assets/rectangle525.png";
 import rectangle524_2 from "@/assets/rectangle5242.png";
 import rectangle525_2 from "@/assets/rectangle5252.png";
 import CustomButton from "@/components/ui/CustomButton";
+import RecommendModal from "./RecommendModal";
+import useCheckLogin from "@/hooks/useCheckLogin";
 
 // Reusable component for hobby items
 const HobbyItem = ({ imgSrc, altText, title }) => (
@@ -35,6 +37,8 @@ const SelectHobbiesPage = () => {
     { imgSrc: rectangle524_2, altText: "여행", title: "여행" },
     { imgSrc: rectangle525_2, altText: "다꾸", title: "다꾸" },
   ];
+  //로그인 되었는지 확인
+  useCheckLogin();
 
   return (
     <div className="w-full h-full min-h-screen bg-white px-4 py-6">
@@ -60,20 +64,13 @@ const SelectHobbiesPage = () => {
       </div>
 
       {/* Recommendation Link */}
-      <Link className="block text-center text-sm md:text-base lg:text-lg font-medium text-black mb-6">
-        잘 모르겠어요, 추천 받을래요
-      </Link>
+      <RecommendModal gender="male" age={20} />
 
       {/* Next Button */}
       {/* FIXME:다음버튼 클릭 시 백엔드 통신 필요 */}
       <CustomButton filled={true} asChild>
         <Link to="/quest">다음</Link>
       </CustomButton>
-
-      {/* Divider */}
-      <div className="w-full">
-        <div className="w-32 h-1 bg-black rounded-full mx-auto" />
-      </div>
     </div>
   );
 };

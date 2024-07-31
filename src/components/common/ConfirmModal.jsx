@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useLoginStore } from "@/store/store";
 import CustomButton from "../ui/CustomButton";
 
-const Modal = ({ message }) => {
+const ConfirmModal = ({ trigger, message }) => {
   const navigate = useNavigate();
   const { setLogout } = useLoginStore();
 
@@ -24,7 +24,7 @@ const Modal = ({ message }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">로그아웃</Button>
+        <Button variant="outline">{trigger}</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -43,4 +43,4 @@ const Modal = ({ message }) => {
   );
 };
 
-export default Modal;
+export default ConfirmModal;
