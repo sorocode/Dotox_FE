@@ -10,7 +10,7 @@ const Header = () => {
     </Link>
   ) : (
     <Link to="/login" className="flex items-center">
-      <div>로그인</div>
+      <div className="font-medium underline">로그인</div>
     </Link>
   );
 
