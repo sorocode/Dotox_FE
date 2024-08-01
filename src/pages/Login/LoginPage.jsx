@@ -5,11 +5,30 @@ import { Separator } from "@/components/ui/separator.jsx";
 
 import StartWithNaverButton from "@/components/common/StartWithNaverButton.jsx";
 import StartWithGoogleButton from "@/components/common/StartWithGoogleButton.jsx";
+import { useMutation } from "@tanstack/react-query";
+import { login } from "@/utils/http.js";
+import { useNavigate } from "react-router-dom";
+import { useLoginStore } from "@/store/store.js";
 
 const LoginPage = () => {
+  const { setLogin } = useLoginStore();
+  const navigate = useNavigate();
+  const { isPending, mutate } = useMutation({
+    mutationFn: login,
+    onSuccess: () => {
+      navigate("/");
+    },
+  });
+
+  const onLoginHandler = () => {
+    mutate(3);
+  };
+
   return (
     <div className="flex flex-col gap-6">
       <p className="font-semibold text-xl">로그인</p>
+      {isPending && "로그인 하는중..."}
+
       <LoginForm />
 
       <div className="flex justify-center items-center gap-2">
@@ -25,7 +44,7 @@ const LoginPage = () => {
       {/* <Button asChild variant="outline">
         <Link to="/signup">회원가입</Link>
       </Button> */}
-      <StartWithNaverButton />
+      <StartWithNaverButton onClick={onLoginHandler} />
       <StartWithGoogleButton />
     </div>
   );

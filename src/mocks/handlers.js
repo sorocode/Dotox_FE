@@ -2,8 +2,10 @@ import { http, HttpResponse } from "msw";
 import { mockUsers } from "./mockData";
 
 export const handlers = [
-  // An example handler
-  http.get("/api/userId", (userId) => {
-    return HttpResponse.json(mockUsers[userId]);
+  // 로그인
+  http.post("/api/login", async ({ request }) => {
+    const loginId = await request.json();
+    const loginUser = mockUsers.find((item) => loginId === item.userID);
+    return HttpResponse.json(loginUser);
   }),
 ];
