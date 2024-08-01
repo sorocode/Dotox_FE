@@ -17,7 +17,7 @@ const LoginPage = () => {
     mutationFn: login,
     onSuccess: (data) => {
       if (data) {
-        setLogin(data.userID);
+        setLogin(data);
         navigate("/");
       }
     },
