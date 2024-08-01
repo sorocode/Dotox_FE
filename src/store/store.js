@@ -1,7 +1,8 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
-const initialState = {
+// 초기 상태 정의
+const initialLoginState = {
   isLogin: false,
   userID: undefined,
   name: undefined,
@@ -11,24 +12,22 @@ const initialState = {
   hobby: undefined,
   email: undefined,
 };
+
+// zustand 스토어 생성
 export const useLoginStore = create(
   devtools((set) => ({
-    // isLogin: false,
-    // userID: undefined,
-    // name: undefined,
-    initialState,
+    ...initialLoginState,
     setLogin: (userData) =>
       set({
-        ...initialState,
         isLogin: true,
         userID: userData.userID,
         name: userData.name,
         gender: userData.gender,
         point: userData.point,
+        time: userData.time,
         hobby: userData.hobby,
-        age: userData.age,
         email: userData.email,
       }),
-    setLogout: () => set({ ...initialState }),
+    setLogout: () => set(initialLoginState),
   }))
 );
