@@ -1,7 +1,7 @@
 export const mockUsers = [
   {
     userID: 1,
-    email: "example@gmail.com",
+    email: "seonghyun.kim@example.com",
     name: "김성현",
     age: 20,
     gender: "m",
@@ -11,8 +11,8 @@ export const mockUsers = [
   },
   {
     userID: 2,
-    email: "john.doe@example.com",
-    name: "John Doe",
+    email: "doe.john@example.com",
+    name: "도정환",
     age: 25,
     gender: "m",
     hobby: "reading",
@@ -21,8 +21,8 @@ export const mockUsers = [
   },
   {
     userID: 3,
-    email: "jane.smith@example.com",
-    name: "Jane Smith",
+    email: "smith.jane@example.com",
+    name: "이재은",
     age: 30,
     gender: "f",
     hobby: "traveling",
@@ -31,8 +31,8 @@ export const mockUsers = [
   },
   {
     userID: 4,
-    email: "alice.wonderland@example.com",
-    name: "Alice Wonderland",
+    email: "wonderland.alice@example.com",
+    name: "최아름",
     age: 28,
     gender: "f",
     hobby: "photography",
@@ -41,8 +41,8 @@ export const mockUsers = [
   },
   {
     userID: 5,
-    email: "bob.builder@example.com",
-    name: "Bob Builder",
+    email: "builder.bob@example.com",
+    name: "박건축",
     age: 35,
     gender: "m",
     hobby: "gaming",
@@ -51,8 +51,8 @@ export const mockUsers = [
   },
   {
     userID: 6,
-    email: "charlie.brown@example.com",
-    name: "Charlie Brown",
+    email: "brown.charlie@example.com",
+    name: "김철수",
     age: 22,
     gender: "m",
     hobby: "cooking",
@@ -61,8 +61,8 @@ export const mockUsers = [
   },
   {
     userID: 7,
-    email: "diana.prince@example.com",
-    name: "Diana Prince",
+    email: "prince.diana@example.com",
+    name: "이영희",
     age: 27,
     gender: "f",
     hobby: "hiking",
@@ -71,8 +71,8 @@ export const mockUsers = [
   },
   {
     userID: 8,
-    email: "edward.scissorhands@example.com",
-    name: "Edward Scissorhands",
+    email: "scissorhands.edward@example.com",
+    name: "장가위",
     age: 24,
     gender: "m",
     hobby: "drawing",
@@ -81,8 +81,8 @@ export const mockUsers = [
   },
   {
     userID: 9,
-    email: "frank.castle@example.com",
-    name: "Frank Castle",
+    email: "castle.frank@example.com",
+    name: "강철수",
     age: 32,
     gender: "m",
     hobby: "fitness",
@@ -91,8 +91,8 @@ export const mockUsers = [
   },
   {
     userID: 10,
-    email: "grace.hopper@example.com",
-    name: "Grace Hopper",
+    email: "hopper.grace@example.com",
+    name: "김은혜",
     age: 29,
     gender: "f",
     hobby: "coding",
