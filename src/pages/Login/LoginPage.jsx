@@ -17,8 +17,7 @@ const LoginPage = () => {
     mutationFn: login,
     onSuccess: (data) => {
       if (data) {
-        console.log(data);
-        setLogin(data.userId);
+        setLogin(data.userID);
         navigate("/");
       }
     },
@@ -31,9 +30,7 @@ const LoginPage = () => {
     <div className="flex flex-col gap-6">
       <p className="font-semibold text-xl">로그인</p>
       {isPending && "로그인 하는중..."}
-
       <LoginForm />
-
       <div className="flex justify-center items-center gap-2">
         <Button type="button" variant="link">
           아이디찾기
