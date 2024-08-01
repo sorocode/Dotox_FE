@@ -15,11 +15,14 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const { isPending, mutate } = useMutation({
     mutationFn: login,
-    onSuccess: () => {
-      navigate("/");
+    onSuccess: (data) => {
+      if (data) {
+        console.log(data);
+        setLogin(data.name);
+        navigate("/");
+      }
     },
   });
-
   const onLoginHandler = () => {
     mutate(3);
   };
