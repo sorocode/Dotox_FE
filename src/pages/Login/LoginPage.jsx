@@ -18,7 +18,7 @@ const LoginPage = () => {
     onSuccess: (data) => {
       if (data) {
         console.log(data);
-        setLogin(data.name);
+        setLogin(data.userId);
         navigate("/");
       }
     },
