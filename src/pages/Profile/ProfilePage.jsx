@@ -28,7 +28,7 @@ const ProfilePage = () => {
         <div className="flex flex-col gap-2">
           <span className="font-bold text-2xl">마이</span>
           <UserInfoSection imgUrl="Profile1.svg" userName={data.name} />
-          <p>성별: {data.gender}</p>
+          <p>성별: {data.gender == "m" ? "남성" : "여성"}</p>
           <p>나이: {data.age}</p>
           <p>취미: {data.hobby}</p>
           <p>도톡스 시간: {data.time}</p>
