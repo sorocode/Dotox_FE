@@ -1,8 +1,8 @@
 import { Button } from "../ui/button";
 
-const StartWithNaverButton = () => {
+const StartWithNaverButton = ({ ...props }) => {
   return (
-    <Button aschild variant="ghost">
+    <Button variant="ghost" {...props}>
       <div className="flex bg-[#03C75B] items-center justify-center gap-2 rounded-md">
         <img
           src="NaverRectangle.png"
