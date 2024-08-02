@@ -22,8 +22,10 @@ const LoginPage = () => {
       }
     },
   });
+
+  // FIXME: 랜덤 아이디로 로그인하게 했는데 이후에 진짜 id가 들어가도록하기
   const onLoginHandler = () => {
-    mutate(3);
+    mutate(Math.floor(Math.random() * 9) + 1);
   };
 
   return (
