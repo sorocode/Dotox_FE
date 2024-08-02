@@ -40,10 +40,10 @@ const RecommendModal = ({ gender, age }) => {
         <DialogHeader>
           <DialogTitle>
             <div>
-              <span className="underline text-xl">
+              <span className="underline text-xl font-bold">
                 {age}대 {gender == "male" ? "남성" : "여성"}
               </span>
-              <span> 인기 취미 TOP 3</span>
+              <span>  인기 취미 TOP 3  </span>
             </div>
           </DialogTitle>
         </DialogHeader>

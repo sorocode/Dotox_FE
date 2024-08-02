@@ -21,7 +21,12 @@ const initialQuestList = [
   {
     name: '장다윤',
     status: '잠시 쉬는 중',
-    imageUrl: 'src/assets/fakeImages/Profile4.svg',
+    imageUrl: 'src/assets/fakeImages/Profile1.svg',
+  },
+  {
+    name: '박지현',
+    status: '퀘스트 진행 중',
+    imageUrl: 'src/assets/fakeImages/Profile2.svg',
   }
 ];
 
