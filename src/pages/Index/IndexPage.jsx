@@ -24,6 +24,9 @@ const IndexPage = () => {
       <CustomButton filled={true} asChild>
         <Link to="quest">퀘스트 수행</Link>
       </CustomButton>
+      <CustomButton filled={true} asChild>
+        <Link to = "/profile">프로필 페이지</Link>
+      </CustomButton>
     </div>
   );
 };

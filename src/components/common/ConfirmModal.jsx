@@ -24,7 +24,7 @@ const ConfirmModal = ({ trigger, message }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">{trigger}</Button>
+        <Button className="absolute w-[83px] top-[20px] left-[490px] font-medium underline text-[22px]" variant="ghost">{trigger}</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
