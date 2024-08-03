@@ -8,6 +8,7 @@ import RecommendPage from "@/pages/Recommend/RecommendPage.jsx";
 import QuestPage from "@/pages/Quest/QuestPage.jsx";
 import LoginPage from "@/pages/Login/LoginPage.jsx";
 import ProfilePage from "@/pages/Profile/ProfilePage";
+import LoadingPage from "@/pages/Login/Loading";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,20 @@ export const router = createBrowserRouter([
       {
         path: "login",
         element: <LoginPage />,
+        children: [],
+      },
+      {
+        path: "login/oauth2/callback", // callback url
+        children: [
+          {
+            path: "naver",
+            element: <LoadingPage provider="naver" />,
+          },
+          {
+            path: "google",
+            element: <LoadingPage provider="google" />,
+          },
+        ],
       },
       {
         path: "profile",
