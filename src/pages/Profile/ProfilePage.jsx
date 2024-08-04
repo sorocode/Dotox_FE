@@ -3,31 +3,31 @@ import { useLoginStore } from "@/store/store";
 import useCheckLogin from "@/hooks/useCheckLogin";
 import { useQuery } from "@tanstack/react-query";
 import { fetchUserInfo } from "@/utils/http.js";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import ConfirmModal from "@/components/common/ConfirmModal";
-import DeleteFriend from "@/components/common/DeleteFriend"; 
+import DeleteFriend from "@/components/common/DeleteFriend";
 
 const initialQuestList = [
   {
-    name: '이정민',
-    status: '퀘스트 진행 중',
-    imageUrl: 'src/assets/fakeImages/Profile2.svg',
+    name: "이정민",
+    status: "퀘스트 진행 중",
+    imageUrl: "src/assets/fakeImages/Profile2.svg",
   },
   {
-    name: '김성현',
-    status: '퀘스트 진행 중',
-    imageUrl: 'src/assets/fakeImages/Profile3.svg',
+    name: "김성현",
+    status: "퀘스트 진행 중",
+    imageUrl: "src/assets/fakeImages/Profile3.svg",
   },
   {
-    name: '장다윤',
-    status: '잠시 쉬는 중',
-    imageUrl: 'src/assets/fakeImages/Profile1.svg',
+    name: "장다윤",
+    status: "잠시 쉬는 중",
+    imageUrl: "src/assets/fakeImages/Profile1.svg",
   },
   {
-    name: '박지현',
-    status: '퀘스트 진행 중',
-    imageUrl: 'src/assets/fakeImages/Profile2.svg',
-  }
+    name: "박지현",
+    status: "퀘스트 진행 중",
+    imageUrl: "src/assets/fakeImages/Profile2.svg",
+  },
 ];
 
 const HomeIndicator = ({ darkMode, className, homeIndicatorClassName }) => {
@@ -45,7 +45,7 @@ const HomeIndicator = ({ darkMode, className, homeIndicatorClassName }) => {
 const ProfilePage = () => {
   useCheckLogin();
   const { userID } = useLoginStore();
-  const { data, isPending } = useQuery({
+  const { data, isPending, error, isError } = useQuery({
     queryKey: ["userInfo", userID],
     queryFn: () => fetchUserInfo(userID),
   });
@@ -53,13 +53,22 @@ const ProfilePage = () => {
   const [questList, setQuestList] = useState(initialQuestList);
 
   const handleDeleteFriend = (friendName) => {
-    setQuestList(questList.filter(friend => friend.name !== friendName));
+    setQuestList(questList.filter((friend) => friend.name !== friendName));
   };
 
   let content;
   if (isPending) {
     content = <p className="text-center">유저 정보를 불러오는 중...</p>;
-  } else if (data) {
+  }
+  if (isError) {
+    content = (
+      <p className="text-center">
+        유저 정보를 불러오는 데 실패했습니다. 다시 시도해주세요
+      </p>
+    );
+  }
+  if (data) {
+    // console.log(data);
     content = (
       <div className="relative max-w-[600px] mx-auto bg-white overflow-hidden p-4">
         <HomeIndicator
@@ -113,9 +122,15 @@ const ProfilePage = () => {
               className="flex items-center space-x-4 p-2 border border-gray-200 rounded-md"
               key={index}
             >
-              <img className="w-[60px] h-[60px] rounded-full" alt="Group" src={item.imageUrl} />
+              <img
+                className="w-[60px] h-[60px] rounded-full"
+                alt="Group"
+                src={item.imageUrl}
+              />
               <div className="flex-grow">
-                <div className="font-medium text-black text-lg">{item.name}</div>
+                <div className="font-medium text-black text-lg">
+                  {item.name}
+                </div>
                 <div className="text-gray-600 text-sm">{item.status}</div>
               </div>
               <DeleteFriend
