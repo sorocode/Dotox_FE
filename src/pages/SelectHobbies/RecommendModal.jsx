@@ -9,7 +9,7 @@ import {
   DialogClose,
 } from "../../components/ui/dialog";
 import CustomButton from "@/components/ui/CustomButton";
-import HobbyItem from "./HobbyItem";
+import { HobbyItem } from "./HobbyItem";
 const RecommendModal = ({ gender, age }) => {
   let recommendList = {
     male: {
@@ -43,7 +43,7 @@ const RecommendModal = ({ gender, age }) => {
               <span className="underline text-xl font-bold">
                 {age}대 {gender == "male" ? "남성" : "여성"}
               </span>
-              <span>  인기 취미 TOP 3  </span>
+              <span> 인기 취미 TOP 3 </span>
             </div>
           </DialogTitle>
         </DialogHeader>

@@ -7,12 +7,11 @@ const API_URL = import.meta.env.VITE_API_URL;
 // 로그인
 // FIXME:실제 API로 변경 필요
 export const login = async (userID) => {
-  const response = await apiRequester.post("api/login", userID);
+  const response = await apiRequester.post("/login", userID);
   return response.data;
 };
 
 // 로그인한 유저 정보 가져오기
-
 export const fetchUserInfo = async (userID) => {
   const response = await apiRequester.get(API_URL + `/${userID}/myPage`);
   return response.data;
@@ -44,7 +43,7 @@ export const searchAllFriedns = async () => {
 // 특정 사용자의 친구 목록 조회
 export const searchFriendsById = async (id) => {
   const response = await apiRequester.get(
-    `/friendlist/findFriendListById1?id1=${id}`
+    API_URL + `/friendlist/findFriendListById1?id1=${id}`
   );
   return response.data;
 };
@@ -58,9 +57,10 @@ export const deleteFriend = async (myid, friendId) => {
   return response.data;
 };
 
-// 사용자 정보 업데이트
-export const updataUserInfo = async (id, data) => {
-  const response = await apiRequester.post(API_URL + `/${id}/userInfo`, data);
+// 사용자 정보 업데이트(취미정보 변경)
+// FIXME:실제 API로 변경 필요
+export const updataUserInfo = async (id, hobby) => {
+  const response = await apiRequester.post(`/${id}/userInfo`, { hobby });
   return response.data;
 };
 

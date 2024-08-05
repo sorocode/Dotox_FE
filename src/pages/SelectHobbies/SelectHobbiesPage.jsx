@@ -10,23 +10,13 @@ import rectangle525_2 from "@/assets/rectangle5252.png";
 import CustomButton from "@/components/ui/CustomButton";
 import RecommendModal from "./RecommendModal";
 import useCheckLogin from "@/hooks/useCheckLogin";
-
-// Reusable component for hobby items
-const HobbyItem = ({ imgSrc, altText, title }) => (
-  <Link className="group relative">
-    <img
-      src={imgSrc}
-      className="w-full h-20 rounded-lg object-cover transition duration-300 group-hover:brightness-125"
-      alt={altText}
-    />
-    <div className="absolute inset-0 bg-black/50 rounded-lg" />
-    <p className="absolute inset-0 flex items-center justify-center text-lg md:text-xl font-bold text-white">
-      {title}
-    </p>
-  </Link>
-);
+import { HobbyItem } from "./HobbyItem";
+import { useMutation } from "@tanstack/react-query";
+import { updataUserInfo } from "@/utils/http";
+import { useLoginStore } from "@/store/store";
 
 const SelectHobbiesPage = () => {
+  const { userID } = useLoginStore();
   const hobbies = [
     { imgSrc: rectangle520, altText: "요리", title: "요리" },
     { imgSrc: rectangle521, altText: "음악", title: "음악" },
@@ -40,6 +30,13 @@ const SelectHobbiesPage = () => {
   //로그인 되었는지 확인
   useCheckLogin();
 
+  const { mutate, isPending, error, isError } = useMutation({
+    mutationFn: updataUserInfo,
+  });
+  const selectHobbyHandler = (hobby) => {
+    console.log(hobby);
+    mutate(userID, hobby);
+  };
   return (
     <div className="w-full h-full min-h-screen bg-white px-4 py-6">
       <div className="mb-6">
@@ -59,6 +56,7 @@ const SelectHobbiesPage = () => {
             imgSrc={hobby.imgSrc}
             altText={hobby.altText}
             title={hobby.title}
+            onClick={() => selectHobbyHandler(hobby.title)}
           />
         ))}
       </div>
