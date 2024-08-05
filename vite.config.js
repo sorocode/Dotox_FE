@@ -23,4 +23,12 @@ export default defineConfig({
       "@": path.resolve("./src"),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000,
+  },
+  output: {
+    manualChunks: {
+      vendor: ["react", "react-dom"],
+    },
+  },
 });
