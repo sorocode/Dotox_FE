@@ -9,6 +9,9 @@ import QuestPage from "@/pages/Quest/QuestPage.jsx";
 import LoginPage from "@/pages/Login/LoginPage.jsx";
 import ProfilePage from "@/pages/Profile/ProfilePage";
 
+import FindFriend from "@/pages/Recommend/FindFriend";
+
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +49,11 @@ export const router = createBrowserRouter([
         path: "profile",
         element: <ProfilePage />,
       },
+    
+      {
+        path: "/find-friend",
+        element: <FindFriend />,
+      }
     ],
   },
 ]);

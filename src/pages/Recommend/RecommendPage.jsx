@@ -5,6 +5,7 @@ import InterestsArea from "@/pages/Recommend/InterestsArea.jsx";
 import CustomButton from "../../components/ui/CustomButton.jsx";
 import useCheckLogin from "@/hooks/useCheckLogin.jsx";
 import { useLoginStore } from "@/store/store.js";
+import React from "react";
 
 const RecommendPage = () => {
   useCheckLogin();
@@ -17,11 +18,10 @@ const RecommendPage = () => {
         {name}님의 취미 친구를 <span>저희가 만들어 드릴게요!😝</span>
       </div>
       <div className="flex justify-evenly gap-2 my-3">
-        {/* TODO:추후 상세 페이지 링크 추가하기 */}
-        <Link>
+        <Link to="/find-friend">
           <img src={FriendImage} alt="Friend Image" />
         </Link>
-        <Link>
+        <Link > 
           <img src={ClubImage} alt="Club Image" />
         </Link>
       </div>
