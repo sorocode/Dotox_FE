@@ -2,7 +2,7 @@
 FROM node:18 AS builder
 
 # Set working directory
-WORKDIR /app
+WORKDIR /
 
 # Install dependencies
 COPY package*.json ./
