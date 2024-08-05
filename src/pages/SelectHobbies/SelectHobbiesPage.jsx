@@ -35,7 +35,8 @@ const SelectHobbiesPage = () => {
   });
   const selectHobbyHandler = (hobby) => {
     console.log(hobby);
-    mutate({ id: userID, hobby });
+    // FIXME: id값 하드코딩값 변경
+    mutate({ id: "user1", hobby });
   };
   return (
     <div className="w-full h-full min-h-screen bg-white px-4 py-6">

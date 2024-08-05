@@ -60,7 +60,7 @@ export const deleteFriend = async (myid, friendId) => {
 // 사용자 정보 업데이트(취미정보 변경)
 // FIXME:실제 API로 변경 필요
 export const updataUserInfo = async ({ id, hobby }) => {
-  const response = await apiRequester.post(`/${id}/userInfo`, {
+  const response = await apiRequester.post(API_URL + `/${id}/userInfo`, {
     hobby,
   });
   return response.data;
