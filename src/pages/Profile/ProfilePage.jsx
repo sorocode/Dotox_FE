@@ -6,6 +6,7 @@ import { fetchUserInfo } from "@/utils/http.js";
 import { Link } from "react-router-dom";
 import ConfirmModal from "@/components/common/ConfirmModal";
 import DeleteFriend from "@/components/common/DeleteFriend";
+import { formatSecondsToTime } from "@/utils/formatTime";
 
 const initialQuestList = [
   {
@@ -46,8 +47,9 @@ const ProfilePage = () => {
   useCheckLogin();
   const { userID } = useLoginStore();
   const { data, isPending, error, isError } = useQuery({
-    queryKey: ["userInfo", userID],
-    queryFn: () => fetchUserInfo(userID),
+    // FIXME: 임시 id값 바꾸기
+    queryKey: ["userInfo", "user1"],
+    queryFn: () => fetchUserInfo("user1"),
   });
 
   const [questList, setQuestList] = useState(initialQuestList);
@@ -86,10 +88,10 @@ const ProfilePage = () => {
           />
           <div>
             <div className="font-bold text-black text-2xl mb-2">
-              {data.name}
+              {data.nickName}
             </div>
             <div className="font-medium text-black text-lg mb-2">
-              현재 도톡스 진행상황: {data.time}
+              현재 도톡스 진행상황: {formatSecondsToTime(data.screenTime)}
             </div>
             <p className="text-black text-lg mb-4">
               <span className="font-medium">팔로워 </span>
