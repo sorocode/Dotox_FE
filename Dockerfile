@@ -2,7 +2,7 @@
 FROM node:18 AS builder
 
 # Set working directory
-WORKDIR /
+WORKDIR /app
 
 # Install dependencies
 COPY package*.json ./
@@ -18,7 +18,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy build files from previous stage
-COPY ./dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Copy custom Nginx configuration file
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
