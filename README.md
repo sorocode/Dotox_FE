@@ -9,6 +9,6 @@ npm i
 ```
 
 ```bash
-#개발 서버 실행 -> http://localhost:5173
+# 개발 서버 실행 -> http://localhost:5173
 npm run dev
 ```
