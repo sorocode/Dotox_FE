@@ -25,7 +25,7 @@ export const handlers = [
     const loginUser = mockUsers.find((item) => item.userID === parseInt(id));
     const requestBody = await request.json();
     console.log(
-      `Captured a "POST /api/${id}/userInfo" request and its request changes ${loginUser.name} hobby into ${requestBody}`
+      `Captured a "POST /api/${id}/userInfo" request and its request changes ${loginUser.name} hobby into ${requestBody.hobby}`
     );
     return HttpResponse.json(requestBody, { status: 201 });
   }),

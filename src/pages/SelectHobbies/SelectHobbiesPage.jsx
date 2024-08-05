@@ -35,7 +35,7 @@ const SelectHobbiesPage = () => {
   });
   const selectHobbyHandler = (hobby) => {
     console.log(hobby);
-    mutate(userID, hobby);
+    mutate({ id: userID, hobby });
   };
   return (
     <div className="w-full h-full min-h-screen bg-white px-4 py-6">
