@@ -100,3 +100,15 @@ export const mockUsers = [
     point: 320,
   },
 ];
+
+export const mockFriendList = [
+  {
+    accountId: "user123",
+    nickName: "John",
+    email: "john@example.com",
+    hobby: "reading",
+    gender: "male",
+    age: "30",
+    screenTime: 3600,
+  },
+];

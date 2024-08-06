@@ -10,7 +10,7 @@ import useCheckLogin from "@/hooks/useCheckLogin";
 
 // SectionTitle Component
 const SectionTitle = ({ title, highlight }) => (
-  <p className="top-0 left-0 [font-family:'Noto_Sans_KR-Bold',Helvetica] font-bold text-transparent text-4xl absolute tracking-[0] leading-[normal]">
+  <p className="top-0 left-0 font-bold text-transparent text-4xl absolute tracking-[0] leading-[normal]">
     <span className="text-[#80d297]">{highlight}</span>
     <span className="text-black">{title}</span>
   </p>
@@ -57,12 +57,12 @@ const Card = ({ name, time, tag, imageUrl, imageAlt, tagColor }) => {
         >
           <div
             className={`relative w-[44px] h-[19px] rounded-sm ${
-              isFollowing ? "bg-[#80d297]" : "bg-[#c1c1c1]"
+              isFollowing ? "bg-[#c1c1c1]" : "bg-[#80d297]"
             }`}
           >
-            <div className="w-full h-full flex items-center justify-center [font-family:'Noto_Sans_KR-Medium',Helvetica] font-medium text-white text-[10px] text-center absolute tracking-[0] leading-[normal]">
+            <button className="w-full h-full flex items-center justify-center font-medium text-white text-[10px] text-center absolute tracking-[0] leading-[normal]">
               {isFollowing ? "팔로잉" : "팔로우"}
-            </div>
+            </button>
           </div>
         </div>
       </div>

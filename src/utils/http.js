@@ -44,7 +44,7 @@ export const searchAllFriedns = async () => {
 // 특정 사용자의 친구 목록 조회
 export const searchFriendsById = async (id) => {
   const response = await apiRequester.get(
-    `/friendlist/findFriendListById1?id1=${id}`
+    API_URL + `/friendlist/findFriendListById1?id1=${id}`
   );
   return response.data;
 };
