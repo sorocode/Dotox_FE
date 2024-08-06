@@ -16,22 +16,22 @@ const initialQuestList = [
   {
     name: "이정민",
     status: "퀘스트 진행 중",
-    imageUrl: {profile1},
+    imageUrl: profile1,
   },
   {
     name: "김성현",
     status: "퀘스트 진행 중",
-    imageUrl: {profile2},
+    imageUrl: profile2,
   },
   {
     name: "장다윤",
     status: "잠시 쉬는 중",
-    imageUrl: {profile3},
+    imageUrl: profile3,
   },
   {
     name: "박지현",
     status: "퀘스트 진행 중",
-    imageUrl: {profile4},
+    imageUrl: profile4,
   },
 ];
 
@@ -87,7 +87,7 @@ const ProfilePage = () => {
           <img
             className="w-[150px] h-[150px] object-cover rounded-full mx-auto mb-4"
             alt="Profile"
-            src="profile1"
+            src={profile1}
           />
           <div>
             <div className="font-bold text-black text-2xl mb-2">
