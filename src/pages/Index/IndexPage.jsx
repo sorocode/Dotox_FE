@@ -1,3 +1,4 @@
+import TimerSection from "@/components/common/TimerSection.jsx";
 import { Button } from "../../components/ui/button.jsx";
 import CustomButton from "../../components/ui/CustomButton.jsx";
 import { Link } from "react-router-dom";
@@ -5,7 +6,7 @@ import { Link } from "react-router-dom";
 const IndexPage = () => {
   return (
     <div>
-      <p>인덱스페이지입니다.</p>
+      <TimerSection />
       <CustomButton filled={false} asChild>
         <Link to="/ranking">랭킹</Link>
       </CustomButton>
@@ -25,7 +26,7 @@ const IndexPage = () => {
         <Link to="quest">퀘스트 수행</Link>
       </CustomButton>
       <CustomButton filled={true} asChild>
-        <Link to = "/profile">프로필 페이지</Link>
+        <Link to="/profile">프로필 페이지</Link>
       </CustomButton>
     </div>
   );
