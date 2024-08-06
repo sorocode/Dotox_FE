@@ -17,8 +17,7 @@ const RecommendPage = () => {
         {name}님의 취미 친구를 <span>저희가 만들어 드릴게요!😝</span>
       </div>
       <div className="flex justify-evenly gap-2 my-3">
-        
-        <Link>
+        <Link to="/find-friend">
           <img src={FriendImage} alt="Friend Image" />
         </Link>
         <Link>
