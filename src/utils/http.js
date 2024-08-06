@@ -59,7 +59,7 @@ export const deleteFriend = async (myid, friendId) => {
 };
 
 // 사용자 정보 업데이트
-export const updataUserInfo = async (id, data) => {
+export const updateUserInfo = async (id, data) => {
   const response = await apiRequester.post(API_URL + `/${id}/userInfo`, data);
   return response.data;
 };
