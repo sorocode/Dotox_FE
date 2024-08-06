@@ -1,3 +1,5 @@
+// SelectHobbiesPage.jsx
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import rectangle520 from "@/assets/rectangle520.png";
 import rectangle521 from "@/assets/rectangle521.png";
@@ -10,23 +12,13 @@ import rectangle525_2 from "@/assets/rectangle5252.png";
 import CustomButton from "@/components/ui/CustomButton";
 import RecommendModal from "./RecommendModal";
 import useCheckLogin from "@/hooks/useCheckLogin";
-
-// Reusable component for hobby items
-const HobbyItem = ({ imgSrc, altText, title }) => (
-  <Link className="group relative">
-    <img
-      src={imgSrc}
-      className="w-full h-20 rounded-lg object-cover transition duration-300 group-hover:brightness-125"
-      alt={altText}
-    />
-    <div className="absolute inset-0 bg-black/50 rounded-lg" />
-    <p className="absolute inset-0 flex items-center justify-center text-lg md:text-xl font-bold text-white">
-      {title}
-    </p>
-  </Link>
-);
+import HobbyItem from "./HobbyItem";
+import HobbyModal from "./HobbyModal";
 
 const SelectHobbiesPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedHobby, setSelectedHobby] = useState(null);
+
   const hobbies = [
     { imgSrc: rectangle520, altText: "요리", title: "요리" },
     { imgSrc: rectangle521, altText: "음악", title: "음악" },
@@ -37,8 +29,20 @@ const SelectHobbiesPage = () => {
     { imgSrc: rectangle524_2, altText: "여행", title: "여행" },
     { imgSrc: rectangle525_2, altText: "다꾸", title: "다꾸" },
   ];
-  //로그인 되었는지 확인
+
+  // 로그인 되었는지 확인
   useCheckLogin();
+
+  const handleHobbyClick = (hobby) => {
+    console.log(`Hobby clicked: ${hobby}`);
+    setSelectedHobby(hobby);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedHobby(null);
+  };
 
   return (
     <div className="w-full h-full min-h-screen bg-white px-4 py-6">
@@ -59,6 +63,7 @@ const SelectHobbiesPage = () => {
             imgSrc={hobby.imgSrc}
             altText={hobby.altText}
             title={hobby.title}
+            onClick={handleHobbyClick}
           />
         ))}
       </div>
@@ -71,6 +76,9 @@ const SelectHobbiesPage = () => {
       <CustomButton filled={true} asChild>
         <Link to="/quest">다음</Link>
       </CustomButton>
+
+      {/* Hobby Modal */}
+      <HobbyModal isOpen={isModalOpen} onClose={closeModal} hobby={selectedHobby} />
     </div>
   );
 };
