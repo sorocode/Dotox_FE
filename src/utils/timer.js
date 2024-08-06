@@ -11,3 +11,7 @@ export const getElapsedTime = () => {
   const currentTime = new Date().getTime();
   return currentTime - startTime;
 };
+
+export const stopTimer = () => {
+  localStorage.removeItem("startTime");
+};
