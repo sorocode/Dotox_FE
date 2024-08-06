@@ -6,27 +6,32 @@ import { fetchUserInfo } from "@/utils/http.js";
 import { Link } from "react-router-dom";
 import ConfirmModal from "@/components/common/ConfirmModal";
 import DeleteFriend from "@/components/common/DeleteFriend";
+import profile1 from '@/assets/fakeImages/Profile1.svg';
+import profile2 from '@/assets/fakeImages/Profile2.svg';
+import profile3 from '@/assets/fakeImages/Profile3.svg';
+import profile4 from '@/assets/fakeImages/Profile4.svg';
+import Lineimg from '@/assets/Line.png';
 
 const initialQuestList = [
   {
     name: "이정민",
     status: "퀘스트 진행 중",
-    imageUrl: "src/assets/fakeImages/Profile2.svg",
+    imageUrl: {profile1},
   },
   {
     name: "김성현",
     status: "퀘스트 진행 중",
-    imageUrl: "src/assets/fakeImages/Profile3.svg",
+    imageUrl: {profile2},
   },
   {
     name: "장다윤",
     status: "잠시 쉬는 중",
-    imageUrl: "src/assets/fakeImages/Profile1.svg",
+    imageUrl: {profile3},
   },
   {
     name: "박지현",
     status: "퀘스트 진행 중",
-    imageUrl: "src/assets/fakeImages/Profile2.svg",
+    imageUrl: {profile4},
   },
 ];
 
@@ -82,7 +87,7 @@ const ProfilePage = () => {
           <img
             className="w-[150px] h-[150px] object-cover rounded-full mx-auto mb-4"
             alt="Profile"
-            src="src/assets/fakeImages/Profile1.svg"
+            src="profile1"
           />
           <div>
             <div className="font-bold text-black text-2xl mb-2">
@@ -112,7 +117,7 @@ const ProfilePage = () => {
           <img
             className="w-[80px] h-[3px] mx-auto"
             alt="Line"
-            src="https://c.animaapp.com/66dJL30k/img/line-14.png"
+            src={Lineimg}
           />
         </div>
 

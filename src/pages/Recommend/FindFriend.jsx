@@ -1,6 +1,14 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ximg from '@/assets/Vector.png';
+import groupimg from '@/assets/Group 9268.png';
+import profile1 from '@/assets/fakeImages/Profile1.svg';
+import profile2 from '@/assets/fakeImages/Profile2.svg';
+import profile3 from '@/assets/fakeImages/Profile3.svg';
+import profile4 from '@/assets/fakeImages/Profile4.svg';
+
+
 
 // SectionTitle Component
 const SectionTitle = ({ title, highlight }) => (
@@ -42,7 +50,7 @@ const Card = ({ name, time, tag, imageUrl, imageAlt, tagColor }) => {
           </div>
         </div>
 
-        <img className="absolute w-[13px] h-[13px] top-2.5 left-2.5" alt="Vector" src="src/assets/Vector.png" />
+        <img className="absolute w-[13px] h-[13px] top-2.5 left-2.5" alt="Vector" src={ximg} />
         <div className="top-2 left-[115px] absolute w-11 h-[17px]" onClick={handleButtonClick}>
           <div className={`relative w-[44px] h-[19px] rounded-sm ${isFollowing ? 'bg-[#80d297]' : 'bg-[#c1c1c1]'}`}>
             <div className="w-full h-full flex items-center justify-center [font-family:'Noto_Sans_KR-Medium',Helvetica] font-medium text-white text-[10px] text-center absolute tracking-[0] leading-[normal]">
@@ -69,7 +77,7 @@ const FindFriend = () => {
                 time="1:34:28"
                 tag="운동"
 
-                imageUrl="src/assets/fakeImages/Profile1.svg"
+                imageUrl={profile4}
 
                 imageAlt="Rectangle"
                 tagColor="#00a869"
@@ -79,7 +87,7 @@ const FindFriend = () => {
                 time="4:43:23"
                 tag="음악"
 
-                imageUrl="src/assets/fakeImages/Profile2.svg"
+                imageUrl={profile2}
 
                 imageAlt="Rectangle"
                 tagColor="#00a869"
@@ -89,7 +97,7 @@ const FindFriend = () => {
                 time="2:10:03"
                 tag="요리"
 
-                imageUrl="src/assets/fakeImages/Profile3.svg"
+                imageUrl={profile3}
                 imageAlt="Rectangle"
                 tagColor="#00a869"
               />
@@ -115,7 +123,7 @@ const FindFriend = () => {
                 time="N/A"
 
                 tag="나만의 다이어리 만들기"
-                imageUrl="src/assets/fakeImages/Profile2.svg"
+                imageUrl={profile2}
                 imageAlt="Rectangle"
 
                 tagColor="#00a869"
@@ -125,7 +133,7 @@ const FindFriend = () => {
                 time="N/A"
 
                 tag="마카롱 만들기"
-                imageUrl="src/assets/fakeImages/Profile3.svg"
+                imageUrl={profile1}
                 imageAlt="Rectangle"
                 tagColor="#00a869"
               />
@@ -134,7 +142,7 @@ const FindFriend = () => {
                 time="N/A"
 
                 tag="멋사 베이커리 베이킹"
-                imageUrl="src/assets/fakeImages/Profile1.svg"
+                imageUrl={profile3}
 
                 imageAlt="Rectangle"
                 tagColor="#00a869"
@@ -146,7 +154,7 @@ const FindFriend = () => {
             </Link>
           </div>
         </div>
-        <img className="absolute w-[560px] h-[230px] top-0 left-0" alt="Group" src="src/assets/Group 9268.png" />
+        <img className="absolute w-[560px] h-[230px] top-0 left-0" alt="Group" src={groupimg} />
 
         <div className="absolute w-[496px] h-[75px] top-[1083px] left-[30px]">
           <div className="relative w-[494px] h-[75px] bg-[#7ad2b1] rounded-[20px]">

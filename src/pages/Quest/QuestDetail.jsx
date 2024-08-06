@@ -36,7 +36,7 @@ const QuestDetail = ({ quest, onClose }) => {
                 height={485}
                 viewBox="0 0 456 410"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                //xmlns="http://www.w3.org/2000/svg"
                 className="absolute left-[-0.5px] top-[-0.5px]"
                 preserveAspectRatio="none"
               >
